@@ -11,7 +11,8 @@ const Home = () => {
     }
     useEffect(() => {
         getNews(country).then((data) => {
-            setNews(data.articles);
+            console.log(data.data);
+            setNews(data.data.articles);
         });
     }, [country]);
     return (
@@ -19,10 +20,11 @@ const Home = () => {
             <div>
                 <Countries selectedCountry={selectedCountry}></Countries>
                 <div>
-                    {news && news.map((value, index) => <div>
+                    {news && news.map((value, index) => <div className='news'>
                         <h5>{value.title}</h5>
                         <p>{value.description}</p>
                     </div>)}
+                    {news.length===0 && <h3>No data</h3>}
                 </div>
             </div>
         </>
