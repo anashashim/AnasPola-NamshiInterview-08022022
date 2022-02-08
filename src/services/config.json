@@ -1,0 +1,5 @@
+{
+    "apiEndpoint": "https://restcountries.com/v2",
+    "newsApiPoint": "https://newsapi.org/v2/top-headlines",
+    "APIkey": "a05582f6af694f43a6109c6aad74a10a"
+}
